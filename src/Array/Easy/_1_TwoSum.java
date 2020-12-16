@@ -10,19 +10,7 @@ import java.util.HashMap;
 //            数组中的两个数字，使其和为目标数
 //            数组中每个元素只能用一次
 //            每个目标数只对应一种解决方案
-class TwoSum {
-    public static void main(String[] args) {
-        int[] nums = new int[] {2, 7, 11, 15};
-        int target = 17;
-        int[] res = twoSum(nums, target);
-        if(res != null) {
-            for(int tmp:res) {
-                System.out.println(tmp);
-            }
-        }else {
-            System.out.println("no");
-        }
-    }
+class _1_TwoSum {
 
 //    ①暴力搜索
 //    本质：遍历所有的两个数字的组合，求其和
@@ -33,7 +21,7 @@ class TwoSum {
 //    转换思路：用空间换时间
 //    只遍历一个数字
 //    另一个数字可以事先将其存储起来（HashMap）
-    public static int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         for(int i = 0;i < nums.length ;i++){
             for(int j = 0;j < nums.length ;j++){       //这里写成j=i+1也是可以的
                 if(nums[i] + nums[j] == target && i != j){
