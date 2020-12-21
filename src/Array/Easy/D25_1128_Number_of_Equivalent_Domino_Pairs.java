@@ -3,20 +3,24 @@ package Array.Easy;
 import java.util.Arrays;
 import java.util.HashMap;
 
-Offer：
-给你一个由一些多米诺骨牌组成的列表dominoes
-如果其中某一张多米诺骨牌可以通过旋转 0度或 180 度得到另一张多米诺骨牌
-我们就认为这两张牌是等价的
-Target：
-在0 <= i < j < dominoes.length的前提下
-找出满足dominoes[i] 和dominoes[j]等价的骨牌对 (i, j) 的数量
+//Offer：
+//给你一个由一些多米诺骨牌组成的列表dominoes
+//如果其中某一张多米诺骨牌可以通过旋转 0度或 180 度得到另一张多米诺骨牌
+//我们就认为这两张牌是等价的
+//Target：
+//在0 <= i < j < dominoes.length的前提下
+//找出满足dominoes[i] 和dominoes[j]等价的骨牌对 (i, j) 的数量
+
+//Example 1:
+//Input: dominoes = [[1,2],[2,1],[3,4],[5,6]]
+//Output: 1
 public class D25_1128_Number_of_Equivalent_Domino_Pairs {
-    排序统计法：
-    for循环遍历
-    先排序，消除等价骨牌差异性
-            接着统计
-    每发现一个A骨牌的等价骨牌
-    就给当前对数 贡献了目前A骨牌的个数
+
+//    排序统计法：
+//    for循环遍历，先排序，消除等价骨牌差异性
+//    接着统计
+//        每发现一个A骨牌的等价骨牌
+//        就给当前对数 贡献了目前A骨牌的个数（相当于新找到的等价骨牌和之前找到的骨牌都能组成一对一对）
     public int numEquivDominoPairs1(int[][] dominoes) {
         int ans = 0;
         int[] cp = new int[100];
@@ -26,18 +30,19 @@ public class D25_1128_Number_of_Equivalent_Domino_Pairs {
         }
         return ans;
     }
-    双重HashMap法：
-    本题对算法复杂度的要求较高，使用暴力的方式用时太大
-            利用HashMap的特性来优化算法的复杂度
-    改变数字对内两个数字的顺序不会影响最终结果
-    所以将所有多米诺骨牌 数值均改成 从小到大的顺序
-            一级map的key1为数字对第一位的值,value1为二级map
-    二级map的key2为数字对第二位的值,value2为该数字对的出现次数
-            当往map中插入数值时
-    若已存在(即value2的值为 >=1 的数值)
-    便将总数sum加上value2的值
-    再将value2的值+1
-    若不存在,则创建,并将value2的值初始化为1
+
+//    双重HashMap法：
+//    本题对算法复杂度的要求较高，使用暴力的方式用时太大
+//        利用HashMap的特性来优化算法的复杂度
+//    改变数字对内两个数字的顺序不会影响最终结果
+//    所以将所有多米诺骨牌 数值均改成 从小到大的顺序
+//    一级map的key1为数字对第一位的值,value1为二级map
+//    二级map的key2为数字对第二位的值,value2为该数字对的出现次数
+//    当往map中插入数值时
+//        若已存在(即value2的值为 >=1 的数值)
+//            便将总数sum加上value2的值
+//            再将value2的值+1
+//        若不存在,则创建,并将value2的值初始化为1
     public int numEquivDominoPairs2(int[][] dominoes) {
         //初始化Map集合
         HashMap<Integer, HashMap<Integer, Integer>> map = new HashMap<>();
