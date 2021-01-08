@@ -7,7 +7,7 @@ import java.util.Arrays;
 //Target：
 //    找出nums中的三个整数，使得它们的和与target最接近
 //    返回这三个数的和。假定每组输入只存在唯一答案
-public class _16_ThreeSumClosest {
+public class D2_16_ThreeSumClosest {
 //    思路：
 //    让返回这个最接近于给定值的值
 //    即：保证当前三数和跟给定值之间的差的绝对值最小

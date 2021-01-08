@@ -5,7 +5,7 @@ package Array.Easy;
 //    给定值
 //Target：
 //    返回给定值在数组中的下标
-public class _35_SearchInsertPosition {
+public class D2_35_SearchInsertPosition {
     //思路1:遍历原数组，进行数值比较即可
     public int searchInsert(int[] nums, int target) {
         for (int i = 0; i < nums.length; ++i) {

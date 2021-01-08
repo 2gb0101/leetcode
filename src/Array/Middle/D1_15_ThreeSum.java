@@ -10,7 +10,7 @@ import java.util.List;
 //    判断nums中是否存在三个元素 a，b，c ,使得a + b + c = 0
 //    找出所有满足条件且不重复的三元组
 //    答案中不可以包含重复的三元组
-public class _15_ThreeSum {
+public class D1_15_ThreeSum {
 //    思路：
 //    依题意，除了三个数全是0的情况之外，肯定会有负数和正数
 //    要先 fix 一个数，然后去找另外两个数，找到两个数且和为第一个 fix 数的相反数就行了

@@ -11,7 +11,7 @@ import java.util.List;
 //    使得 a + b + c + d 的值与 target 相等
 //    找出所有满足条件且不重复的四元组
 //    注意：答案中不可以包含重复的四元组
-public class _18_FourSum {
+public class D2_18_FourSum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
         Arrays.sort(nums);

@@ -2,7 +2,7 @@ package Array.Easy;
 
 //Offer：一个以数组形式给的非负数
 //Target：给该数加1，并且保证数组的开头是该数的最高有效位
-public class _66_PlusOne {
+public class D3_66_PlusOne {
 //    解法一（暴力法）：（需要对末尾第一个数进行特殊处理）
 //    将非负数每位上的数字分别存在数组中，且最高位在最开头
 //    需要给这个数字加一，即在末尾数字加一

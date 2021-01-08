@@ -6,7 +6,7 @@ package Array.Easy;
 //    返回一个数字，说明数组中一共有多少个不同的数（但是leetcode上又要求返回数组）
 //    （要求剔除数组中重复的色块）
 //    不得申请新数组帮助解决问题
-public class _26_RemoveDuplicatesfromSortedArray {
+public class D1_26_RemoveDuplicatesfromSortedArray {
 
 //----思路一：快慢标识
 //    最开始时两个标识都指向第一个数字

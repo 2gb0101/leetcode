@@ -6,7 +6,7 @@ package Array.Middle;
 //    在坐标内画 n 条垂直线，垂直线 i的两个端点分别为(i,ai) 和 (i, 0)
 //Target：
 //    找出其中的两条线，使得它们与x轴共同构成的容器可以容纳最多的水
-public class _11_ContainerWithMostWater {
+public class D1_11_ContainerWithMostWater {
 //    思路：双指针
 //    定义i和j两个指针分别指向数组的左右两端，两个指针向中间搜索
 //    每移动一次算一个值和结果比较取较大的
