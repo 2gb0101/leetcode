@@ -6,7 +6,7 @@ import java.util.HashMap;
 //Offer：一个整数数组
 //Target：查找数组中是否包含重复值
 public class D7_217_ContainsDuplicate {
-    //    哈希表法
+//    哈希表法
 //    遍历整个数组，如果哈希表里存在该数，返回true
 //    如果不存在，则将其放入哈希表中
     public boolean containsDuplicate(int[] nums) {
