@@ -22,7 +22,7 @@ import java.util.List;
 //3            2        [0,1,3,2]
 //4            1        [0,4,1,3,2]
 public class D32_1389_createTargetArray {
-//    题目啰嗦一大堆，其实就是不断在数组的指定的索引index[i]处插入元素
+    //    题目啰嗦一大堆，其实就是不断在数组的指定的索引index[i]处插入元素
 //    这里注意题目提示中有一个限制条件index[i] <= i，也就是说在插入第i个元素时，索引最多为为最后一个元素
 //    有了上述条件，直接使用java中ArrayList类中的add(int index, Object o)函数即可将制定元素插入到指定位置
 //    最后再将List中元素依次放到数组中即可
